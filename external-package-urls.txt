@@ -41,6 +41,8 @@ all-all https://github.com/kongfl888/luci-app-adguardhome/releases/download/v1.8
 #
 arm64 https://github.com/lrdrdn/my-opkg-repo/raw/main/aarch64_cortex-a72/atinout_0.9.1_aarch64_cortex-a72.ipk
 arm64 https://github.com/lrdrdn/my-opkg-repo/raw/main/aarch64_cortex-a72/sms-tool_2022-03-21-f07699ab-1_aarch64_cortex-a72.ipk
+armv8 https://github.com/lrdrdn/my-opkg-repo/raw/main/aarch64_generic/atinout_0.9.1_x86_64.ipk
+armv8 https://github.com/lrdrdn/my-opkg-repo/raw/main/aarch64_generic/sms-tool_2022-03-21-f07699ab-1_x86_64.ipk
 x86 https://github.com/lrdrdn/my-opkg-repo/raw/main/x86_64/atinout_0.9.1_x86_64.ipk
 x86 https://github.com/lrdrdn/my-opkg-repo/raw/main/x86_64/sms-tool_2022-03-21-f07699ab-1_x86_64.ipk
 all https://github.com/lrdrdn/my-opkg-repo/raw/main/generic/luci-app-tinyfm_2.6_all.ipk
@@ -68,6 +70,8 @@ all https://github.com/lrdrdn/my-opkg-repo/raw/main/generic/luci-theme-argon_2.3
 #
 arm64-21.02 https://github.com/lrdrdn/my-opkg-repo/raw/21.02/aarch64_cortex-a72/atinout_0.9.1_aarch64_cortex-a72.ipk
 arm64-21.02 https://github.com/lrdrdn/my-opkg-repo/raw/21.02/aarch64_cortex-a72/sms-tool_2022-03-21-f07699ab-1_aarch64_cortex-a72.ipk
+armv8-21.02 https://github.com/lrdrdn/my-opkg-repo/raw/main/aarch64_generic/atinout_0.9.1_x86_64.ipk
+armv8-21.02 https://github.com/lrdrdn/my-opkg-repo/raw/main/aarch64_generic/sms-tool_2022-03-21-f07699ab-1_x86_64.ipk
 x86-21.02 https://github.com/lrdrdn/my-opkg-repo/raw/21.02/x86_64/atinout_0.9.1_x86_64.ipk
 x86-21.02 https://github.com/lrdrdn/my-opkg-repo/raw/21.02/x86_64/sms-tool_2022-03-21-f07699ab-1_x86_64.ipk
 old-21.02 https://github.com/helmiau/helmiwrt-packages/releases/download/ipk/luci-app-tinyfm_2.5_all.ipk
