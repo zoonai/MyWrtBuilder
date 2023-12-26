@@ -14,7 +14,7 @@ on:
           - rpi-3
           - rpi-4
           - x86-64
-          - nanopi-r5s
+          - friendlyarm_nanopi-r5s
       release_branch:
         description: "Select the release branch:"
         required: true
