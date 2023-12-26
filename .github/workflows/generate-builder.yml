@@ -86,7 +86,7 @@ jobs:
         run: |
           if [ "$TARGET" == "rpi-1" ]; then
             DEVICE="rpi-1"
-            DEVICE_NAME= NanoPi-R5S"
+            DEVICE_NAME="NanoPi-R5S"
             TARGET_1="bcm27xx/bcm2708"
             TARGET_2="bcm27xx-bcm2708"
             ARCH_1="armv6"
@@ -94,7 +94,7 @@ jobs:
             ARCH_3=""
           elif [ "$TARGET" == "rpi-2" ]; then
             DEVICE="rpi-2"
-            DEVICE_NAME= NanoPi-R5S"
+            DEVICE_NAME="NanoPi-R5S"
             TARGET_1="bcm27xx/bcm2709"
             TARGET_2="bcm27xx-bcm2709"
             ARCH_1="armv7"
@@ -102,7 +102,7 @@ jobs:
             ARCH_3=""
           elif [ "$TARGET" == "rpi-3" ]; then
             DEVICE="rpi-3"
-            DEVICE_NAME= NanoPi-R5S"
+            DEVICE_NAME="NanoPi-R5S"
             TARGET_1="bcm27xx/bcm2710"
             TARGET_2="bcm27xx-bcm2710"
             ARCH_1="armv7"
@@ -110,7 +110,7 @@ jobs:
             ARCH_3="aarch64_cortex-a53"
           elif [ "$TARGET" == "rpi-4" ]; then
             DEVICE="rpi-4"
-            DEVICE_NAME= NanoPi-R5S"
+            DEVICE_NAME="NanoPi-R5S"
             TARGET_1="bcm27xx/bcm2711"
             TARGET_2="bcm27xx-bcm2711"
             ARCH_1="arm64"
@@ -125,7 +125,7 @@ jobs:
             ARCH_3=""
           elif [ "$TARGET" == "friendlyarm_nanopi-r5s" ]; then
             DEVICE="friendlyarm_nanopi-r5s"
-            DEVICE_NAME= NanoPi-R5S"
+            DEVICE_NAME="NanoPi-R5S"
             TARGET_1="rockchip/armv8"
             TARGET_2="friendlyarm_nanopi-r5s"
             ARCH_1="armv8"
