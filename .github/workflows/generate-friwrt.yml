@@ -134,7 +134,7 @@ jobs:
           echo "BASE=${RELEASE_BRANCH%:*}" >> $GITHUB_ENV
           echo "BRANCH=${RELEASE_BRANCH#*:}" >> $GITHUB_ENV
           echo "tags=$( [[ "${RELEASE_BRANCH#*:}" == "21.02.7" ]] && echo "21.02" )" >> $GITHUB_ENV
-          echo "PROFILE=$TARGET" >> $GITHUB_ENV
+          echo "PROFILE=$DEVICE" >> $GITHUB_ENV
           echo "TARGET_SYSTEM=$TARGET_1" >> $GITHUB_ENV
           echo "TARGET_NAME=$TARGET_2" >> $GITHUB_ENV
           echo "DEVICE_NAME=$DEVICE" >> $GITHUB_ENV
