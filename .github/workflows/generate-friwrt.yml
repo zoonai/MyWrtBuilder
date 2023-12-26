@@ -119,10 +119,10 @@ jobs:
             ARCH_1="amd64"
             ARCH_2="x86_64"
             ARCH_3=""
-          elif [ "$TARGET" == "nanopi-r5s" ]; then
+          elif [ "$TARGET" == "friendlyarm_nanopi-r5s" ]; then
             DEVICE="friendlyarm_nanopi-r5s"
             TARGET_1="rockchip/armv8"
-            TARGET_2="rockchip-armv8"
+            TARGET_2="friendlyarm_nanopi-r5s"
             ARCH_1="armv8"
             ARCH_2="aarch64"
             ARCH_3="aarch64_generic"
@@ -198,7 +198,7 @@ jobs:
         if: steps.compile.outputs.status == 'success' && !cancelled()
         run: |
           cd $WORKING_DIR/bin/targets/$TARGET_SYSTEM/
-          for file in *-$TARGET_NAME-*.img.gz; do mv "$file" "fri_${file%.img.gz}_$DATE.img.gz"; done
+          for file in *-$TARGET_NAME-*.img.gz; do mv "$file" "Zona_${file%.img.gz}_$DATE.img.gz"; done
           echo "status=success" >> $GITHUB_OUTPUT
           
       - name: Upload Firmware to Artifacts
