@@ -119,13 +119,13 @@ jobs:
             ARCH_1="amd64"
             ARCH_2="x86_64"
             ARCH_3=""
-          elif [ "$TARGET" == "friendlyarm_nanopi-r5s" ]; then
+          elif [ "$TARGET" == "nanopi-r5s" ]; then
             DEVICE="friendlyarm_nanopi-r5s"
             TARGET_1="rockchip/armv8"
             TARGET_2="rockchip-armv8"
             ARCH_1="armv8"
-            ARCH_2="aarch64_generic"
-            ARCH_3=""
+            ARCH_2="aarch64"
+            ARCH_3="aarch64_generic"
           fi
           echo "BUILD_SH=make-build.sh" >> $GITHUB_ENV
           echo "PATCH_SH=scripts/builder-patch.sh" >> $GITHUB_ENV
