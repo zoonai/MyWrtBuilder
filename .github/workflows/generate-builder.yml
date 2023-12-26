@@ -205,14 +205,14 @@ jobs:
         if: steps.compile.outputs.status == 'success' && !cancelled()
         run: |
           cd $WORKING_DIR/bin/targets/$TARGET_SYSTEM/
-          for file in *-$TARGET_NAME-*.img.gz; do mv "$file" "Zona_$NAME_DEVICE-$TARGET_NAME-$DATE.img.gz"; done
+          for file in *-$TARGET_NAME-*.img.gz; do mv "$file" "Zona_$NAME_DEVICE-$TARGET_2-$DATE.img.gz"; done
           echo "status=success" >> $GITHUB_OUTPUT
           
       - name: Upload Firmware to Artifacts
         uses: actions/upload-artifact@v2
         if: env.UPLOAD_ARTIFACTS == 'true' && !cancelled()
         with:
-          name: ${{ env.BASE }}-${{ env.BRANCH }}-$NAME_DEVICE-images-${{ env.DATETIME }}
+          name: ${{ env.BASE }}-${{ env.BRANCH }}-$TARGET_NAME-images-${{ env.DATETIME }}
           path: ${{ env.WORKING_DIR }}/bin/targets/${{ env.TARGET_SYSTEM }}//*
 
       - name: Upload Firmware to Release
