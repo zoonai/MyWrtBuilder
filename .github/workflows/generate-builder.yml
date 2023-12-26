@@ -205,7 +205,7 @@ jobs:
         if: steps.compile.outputs.status == 'success' && !cancelled()
         run: |
           cd $WORKING_DIR/bin/targets/$TARGET_SYSTEM/
-          for file in *-$TARGET_NAME-*.img.gz; do mv "$file" "Zona_$NAME_DEVICE_$TARGET_NAME_$DATE.img.gz"; done
+          for file in *-$TARGET_NAME-*.img.gz; do mv "$file" "Zona_$NAME_DEVICE-$TARGET_NAME-$DATE.img.gz"; done
           echo "status=success" >> $GITHUB_OUTPUT
           
       - name: Upload Firmware to Artifacts
