@@ -124,8 +124,8 @@ jobs:
             TARGET_1="rockchip/armv8"
             TARGET_2="rockchip-armv8"
             ARCH_1="armv8"
-            ARCH_2="aarch64"
-            ARCH_3="aarch64_generic"
+            ARCH_2="aarch64_generic"
+            ARCH_3=""
           fi
           echo "BUILD_SH=make-build.sh" >> $GITHUB_ENV
           echo "PATCH_SH=scripts/builder-patch.sh" >> $GITHUB_ENV
