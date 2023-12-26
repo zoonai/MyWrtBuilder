@@ -126,7 +126,7 @@ jobs:
             ARCH_3=""
           elif [ "$TARGET" == "friendlyarm_nanopi-r5s" ]; then
             DEVICE="friendlyarm_nanopi-r5s"
-            DEVICE_NAME= "NanoPi-R5S"
+            DEVICE_NAME="NanoPi-R5S"
             TARGET_1="rockchip/armv8"
             TARGET_2="rockchip-armv8"
             ARCH_1="armv8"
