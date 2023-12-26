@@ -119,8 +119,8 @@ jobs:
             ARCH_1="amd64"
             ARCH_2="x86_64"
             ARCH_3=""
-          elif [ "$TARGET" == "nanopi-r5s" ]; then
-            DEVICE="friendlyarm_nanopi-r5s"
+          elif [ "$TARGET" == "friendlyarm_nanopi-r5s" ]; then
+            DEVICE="Nano Pi - R5S"
             TARGET_1="rockchip/armv8"
             TARGET_2="rockchip-armv8"
             ARCH_1="armv8"
