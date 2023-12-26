@@ -4,7 +4,7 @@
 make info
 
 # Main configuration name
-PROFILE="$DEVICE"
+PROFILE="$TARGET"
 PACKAGES=""
 
 # Argon Theme
