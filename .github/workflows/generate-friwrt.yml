@@ -14,7 +14,7 @@ on:
           - rpi-3
           - rpi-4
           - x86-64
-          - friendlyarm_nanopi-r5s
+          - nanopi-r5s
       release_branch:
         description: "Select the release branch:"
         required: true
@@ -120,9 +120,9 @@ jobs:
             ARCH_2="x86_64"
             ARCH_3=""
           elif [ "$TARGET" == "friendlyarm_nanopi-r5s" ]; then
-            DEVICE="Nano Pi - R5S"
+            DEVICE="Nano-Pi-R5S"
             TARGET_1="rockchip/armv8"
-            TARGET_2="rockchip-armv8"
+            TARGET_2="friendlyarm_nanopi-r5s"
             ARCH_1="armv8"
             ARCH_2="aarch64"
             ARCH_3="aarch64_generic"
@@ -134,9 +134,10 @@ jobs:
           echo "BASE=${RELEASE_BRANCH%:*}" >> $GITHUB_ENV
           echo "BRANCH=${RELEASE_BRANCH#*:}" >> $GITHUB_ENV
           echo "tags=$( [[ "${RELEASE_BRANCH#*:}" == "21.02.7" ]] && echo "21.02" )" >> $GITHUB_ENV
-          echo "PROFILE=$DEVICE" >> $GITHUB_ENV
+          echo "PROFILE=$TARGET" >> $GITHUB_ENV
           echo "TARGET_SYSTEM=$TARGET_1" >> $GITHUB_ENV
           echo "TARGET_NAME=$TARGET_2" >> $GITHUB_ENV
+          echo "DEVICE_NAME=$DEVICE" >> $GITHUB_ENV
           echo "ARCH=$ARCH_1" >> $GITHUB_ENV
           echo "ARCH_2=$ARCH_2" >> $GITHUB_ENV
           echo "ARCH_3=$ARCH_3" >> $GITHUB_ENV
@@ -198,14 +199,14 @@ jobs:
         if: steps.compile.outputs.status == 'success' && !cancelled()
         run: |
           cd $WORKING_DIR/bin/targets/$TARGET_SYSTEM/
-          for file in *-$TARGET_NAME-*.img.gz; do mv "$file" "Zona_${file%.img.gz}_$DATE.img.gz"; done
+          for file in *-$DEVICE_NAME-*.img.gz; do mv "$file" "Zona_${file%.img.gz}_$DATE.img.gz"; done
           echo "status=success" >> $GITHUB_OUTPUT
           
       - name: Upload Firmware to Artifacts
         uses: actions/upload-artifact@v2
         if: env.UPLOAD_ARTIFACTS == 'true' && !cancelled()
         with:
-          name: ${{ env.BASE }}-${{ env.BRANCH }}-$TARGET_NAME-images-${{ env.DATETIME }}
+          name: ${{ env.BASE }}-${{ env.BRANCH }}-$DEVICE_NAME-images-${{ env.DATETIME }}
           path: ${{ env.WORKING_DIR }}/bin/targets/${{ env.TARGET_SYSTEM }}//*
 
       - name: Upload Firmware to Release
@@ -226,3 +227,4 @@ jobs:
             - Default password: ${{ env.LOGIN_PASSWORD || 'none' }}
             - Default WIFI name: ${{ env.WIFI_SSID }}
             - Default WIFI password: ${{ env.WIFI_PASSWORD || 'none' }}
+            
