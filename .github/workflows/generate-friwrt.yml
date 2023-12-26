@@ -199,7 +199,6 @@ jobs:
         run: |
           cd $WORKING_DIR/bin/targets/$TARGET_SYSTEM/
           for file in *-$TARGET_NAME-*.img.gz; do mv "$file" "fri_${file%.img.gz}_$DATE.img.gz"; done
-          rm -rf *.json *.manifest *.bin *-rootfs*
           echo "status=success" >> $GITHUB_OUTPUT
           
       - name: Upload Firmware to Artifacts
@@ -220,7 +219,7 @@ jobs:
           tag: ${{ env.TARGET }}-${{ env.BASE }}-${{ env.BRANCH }}-${{ env.DATE }}
           overwrite: true
           body: |
-            ### friWrt ${{ env.BASE }}-${{ env.BRANCH }} Image information
+            ### Zona Build | ${{ env.BASE }}-${{ env.BRANCH }} Image information
             Build date: ${{ env.DATETIME }}
             - Default IP: 10.0.0.1
             - Default username: root
