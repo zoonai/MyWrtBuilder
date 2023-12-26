@@ -122,7 +122,7 @@ jobs:
           elif [ "$TARGET" == "friendlyarm_nanopi-r5s" ]; then
             DEVICE="friendlyarm_nanopi-r5s"
             TARGET_1="rockchip/armv8"
-            TARGET_2="friendlyarm_nanopi-r5s"
+            TARGET_2="rockchip-armv8"
             ARCH_1="armv8"
             ARCH_2="aarch64"
             ARCH_3="aarch64_generic"
